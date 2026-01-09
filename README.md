@@ -10,6 +10,9 @@
 
 ---
 
+<img width="1033" height="624" alt="image" src="https://github.com/user-attachments/assets/7e569d40-e976-4f47-9ffd-02033ff02095" />
+<img width="1442" height="626" alt="image" src="https://github.com/user-attachments/assets/a63f78f9-71a3-41f0-9e39-fadd0fd1f516" />
+
 ## 📋 Project Overview
 
 **Project Title:** Online Book Store Data Analysis  
@@ -26,16 +29,16 @@ This project demonstrates comprehensive SQL skills for analyzing an online books
 <tr>
 <td width="50%">
 
-- 🗄️ Set up a relational database for an online bookstore
-- 📥 Import data from CSV files into PostgreSQL
-- 🔍 Perform exploratory data analysis (EDA)
+- Set up a relational database for an online bookstore
+- Import data from CSV files into PostgreSQL
+- Perform exploratory data analysis (EDA)
 
 </td>
 <td width="50%">
 
-- 💡 Answer business questions using SQL queries
-- 📊 Analyze sales patterns & customer behavior
-- 📦 Manage inventory and track stock levels
+- Answer business questions using SQL queries
+- Analyze sales patterns & customer behavior
+- Manage inventory and track stock levels
 
 </td>
 </tr>
@@ -96,17 +99,17 @@ Records order transactions with relationships:
 ### 🔗 Entity Relationship Diagram
 
 ```
-┌─────────────┐         ┌──────────────┐         ┌──────────────┐
-│   BOOKS     │         │    ORDERS    │         │  CUSTOMERS   │
-├─────────────┤         ├──────────────┤         ├──────────────┤
-│ Book_ID (PK)│◄────────│ Book_ID (FK) │         │Customer_ID(PK)│
-│ Title       │         │Order_ID (PK) │         │ Name         │
-│ Author      │         │Customer_ID(FK)│────────►│ Email        │
-│ Genre       │         │ Order_Date   │         │ Phone        │
-│ Pub_Year    │         │ Quantity     │         │ City         │
-│ Price       │         │ Total_Amount │         │ Country      │
-│ Stock       │         └──────────────┘         └──────────────┘
-└─────────────┘
+  ┌─────────────┐         ┌──────────────┐         ┌──────────────┐
+  │   BOOKS     │         │    ORDERS    │         │  CUSTOMERS   │
+  ├─────────────┤         ├──────────────┤         ├──────────────┤
+  │ Book_ID (PK)│◄────────│ Book_ID (FK) │         │Customer_ID(PK)│
+  │ Title       │         │Order_ID (PK) │         │ Name         │
+  │ Author      │         │Customer_ID(FK)│────────►│ Email       │
+  │ Genre       │         │ Order_Date   │         │ Phone        │
+  │ Pub_Year    │         │ Quantity     │         │ City         │
+  │ Price       │         │ Total_Amount │         │ Country      │
+  │ Stock       │         └──────────────┘         └──────────────┘
+  └─────────────┘
 ```
 
 ---
@@ -119,12 +122,12 @@ This project answers critical business questions through SQL queries:
 
 | Category | Focus Area |
 |----------|-----------|
-| 💰 **Revenue Analysis** | Total sales, revenue trends, top products |
-| 📚 **Product Performance** | Best-selling books, genre analysis |
-| 👥 **Customer Insights** | Loyal customers, spending patterns |
-| 📦 **Inventory Management** | Stock levels, reorder points |
-| 📅 **Time-based Analysis** | Seasonal trends, peak periods |
-| 🌍 **Geographic Analysis** | Sales by location, regional preferences |
+|  **Revenue Analysis** | Total sales, revenue trends, top products |
+|  **Product Performance** | Best-selling books, genre analysis |
+|  **Customer Insights** | Loyal customers, spending patterns |
+|  **Inventory Management** | Stock levels, reorder points |
+|  **Time-based Analysis** | Seasonal trends, peak periods |
+|  **Geographic Analysis** | Sales by location, regional preferences |
 
 </div>
 
@@ -223,80 +226,18 @@ The analysis provides valuable insights into:
 
 These insights can drive data-informed business decisions for an online bookstore.
 
----
 
-## 🚀 Getting Started
 
-```sql
--- Create Database
-CREATE DATABASE online_book_store_db;
 
--- Connect to Database
-\c online_book_store_db
 
--- Create Tables
--- (See Database Setup section for table schemas)
 
--- Import CSV Data
-COPY books FROM '/path/to/books.csv' CSV HEADER;
-COPY customers FROM '/path/to/customers.csv' CSV HEADER;
-COPY orders FROM '/path/to/orders.csv' CSV HEADER;
-```
 
----
 
-## 📁 Project Structure
 
-```
-online-book-store-sql/
-│
-├── 📄 README.md
-├── 📊 data/
-│   ├── books.csv
-│   ├── customers.csv
-│   └── orders.csv
-│
-├── 🗄️ schema/
-│   └── database_setup.sql
-│
-├── 🔍 queries/
-│   ├── sales_analysis.sql
-│   ├── customer_analysis.sql
-│   ├── inventory_analysis.sql
-│   └── author_genre_analysis.sql
-│
-└── 📈 results/
-    └── analysis_findings.md
-```
 
----
 
-## 🛠️ Technologies Used
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=sql&logoColor=white)
-![CSV](https://img.shields.io/badge/CSV-Data-green?style=flat&logo=files&logoColor=white)
 
----
 
-## 📧 Contact
 
-Feel free to reach out for collaborations or questions!
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/yourusername)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:your.email@example.com)
-
-</div>
-
----
-
-<div align="center">
-
-### ⭐ If you found this project helpful, please consider giving it a star!
-
-**Made with ❤️ and SQL**
-
-</div>
