@@ -70,7 +70,6 @@ CREATE TABLE Orders (
 <table>
 <tr>
 <td width="33%" valign="top">
-
 ### Books Table
 - `Book_ID` (PK)
 - `Title`
@@ -82,7 +81,6 @@ CREATE TABLE Orders (
 
 </td>
 <td width="33%" valign="top">
-
 ### Customers Table
 - `Customer_ID` (PK)
 - `Name`
@@ -93,7 +91,6 @@ CREATE TABLE Orders (
 
 </td>
 <td width="33%" valign="top">
-
 ### Orders Table
 - `Order_ID` (PK)
 - `Customer_ID` (FK)
@@ -194,7 +191,6 @@ ORDER BY total_spend DESC;
 <table>
 <tr>
 <td width="50%" valign="top">
-
 ### Sales Insights
 ```
 Total Revenue Calculated
@@ -202,7 +198,6 @@ Best-Selling Books Identified
 Genre Performance Analyzed
 Peak Period: November 2023
 ```
-
 ### Customer Behavior
 ```
 Loyal Customers Tracked
@@ -210,10 +205,8 @@ High-Value Customers Found
 Geographic Distribution Mapped
 Purchase Frequency Analyzed
 ```
-
 </td>
 <td width="50%" valign="top">
-
 ### Inventory Status
 ```
 Current Stock Calculated
@@ -221,7 +214,6 @@ Low Stock Alerts
 Stock Movement Tracked
 Order Fulfillment Monitored
 ```
-
 ### Author & Genre Trends
 ```
 Top Authors Ranked
@@ -229,14 +221,11 @@ Genre Pricing Compared
 Popular Categories Found
 Sales Contribution Analyzed
 ```
-
 </td>
 </tr>
 </table>
-
 ---
 
----
 
 ## 🎓 Conclusion
 
