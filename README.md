@@ -278,16 +278,6 @@ This project showcases end-to-end SQL data analysis for an e-commerce bookstore.
 
 
 
-
-
-
-
-
-
-
-
-
-
 # 📚 Online Book Store Analysis - SQL Project
 
 <div align="center">
@@ -300,7 +290,10 @@ This project showcases end-to-end SQL data analysis for an e-commerce bookstore.
 
 ---
 
-## 📋 Project Overview
+<img width="1033" height="624" alt="image" src="https://github.com/user-attachments/assets/7e569d40-e976-4f47-9ffd-02033ff02095" />
+<img width="1442" height="626" alt="image" src="https://github.com/user-attachments/assets/a63f78f9-71a3-41f0-9e39-fadd0fd1f516" />
+
+## Project Overview
 
 This project demonstrates SQL skills for analyzing an online bookstore database. It includes database creation, data import from CSV files, and comprehensive data analysis using various SQL queries to extract business insights.
 
@@ -309,19 +302,19 @@ This project demonstrates SQL skills for analyzing an online bookstore database.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
-- 🗄️ Set up relational database for online bookstore
-- 📥 Import data from CSV files into PostgreSQL
-- 🔍 Perform exploratory data analysis (EDA)
-- 💡 Answer business questions using SQL queries
-- 📊 Analyze sales patterns, customer behavior & inventory
+- Set up relational database for online bookstore
+- Import data from CSV files into PostgreSQL
+- Perform exploratory data analysis (EDA)
+- Answer business questions using SQL queries
+- Analyze sales patterns, customer behavior and inventory
 
 ---
 
-## 🏗️ Database Structure
+## Database Structure
 
-### 📝 Schema Creation
+### Schema Creation
 
 ```sql
 CREATE TABLE Books (
@@ -357,7 +350,7 @@ CREATE TABLE Orders (
 <tr>
 <td width="33%" valign="top">
 
-### 📚 Books Table
+### Books Table
 - `Book_ID` (PK)
 - `Title`
 - `Author`
@@ -369,7 +362,7 @@ CREATE TABLE Orders (
 </td>
 <td width="33%" valign="top">
 
-### 👥 Customers Table
+### Customers Table
 - `Customer_ID` (PK)
 - `Name`
 - `Email`
@@ -380,7 +373,7 @@ CREATE TABLE Orders (
 </td>
 <td width="33%" valign="top">
 
-### 🛒 Orders Table
+### Orders Table
 - `Order_ID` (PK)
 - `Customer_ID` (FK)
 - `Book_ID` (FK)
@@ -392,7 +385,7 @@ CREATE TABLE Orders (
 </tr>
 </table>
 
-### 🔗 Entity Relationship Diagram
+### Entity Relationship Diagram
 
 ```
 ┌─────────────┐         ┌──────────────┐         ┌──────────────┐
@@ -410,19 +403,16 @@ CREATE TABLE Orders (
 
 ---
 
-## 📊 Business Questions & SQL Queries
+## Business Questions & SQL Queries
 
-<details>
-<summary><b>💰 What is the total revenue generated?</b></summary>
+### 1. What is the total revenue generated?
 
 ```sql
 SELECT SUM(total_amount) AS Revenue
 FROM Orders;
 ```
-</details>
 
-<details>
-<summary><b>📚 Which book is the best seller?</b></summary>
+### 2. Which book is the best seller?
 
 ```sql
 SELECT b.title, COUNT(*) AS no_of_orders
@@ -432,10 +422,8 @@ GROUP BY b.title
 ORDER BY no_of_orders DESC
 LIMIT 1;
 ```
-</details>
 
-<details>
-<summary><b>👥 Who are the most loyal customers?</b></summary>
+### 3. Who are the most loyal customers?
 
 ```sql
 SELECT c.name, COUNT(*) AS Total_orders
@@ -445,10 +433,8 @@ GROUP BY c.name
 HAVING COUNT(*) >= 2
 ORDER BY Total_orders DESC;
 ```
-</details>
 
-<details>
-<summary><b>📦 What is the current inventory status?</b></summary>
+### 4. What is the current inventory status?
 
 ```sql
 SELECT b.book_id, b.title, b.stock,
@@ -459,10 +445,8 @@ LEFT JOIN Orders o ON b.book_id = o.book_id
 GROUP BY b.book_id
 ORDER BY book_id;
 ```
-</details>
 
-<details>
-<summary><b>✍️ Which authors have the highest sales?</b></summary>
+### 5. Which authors have the highest sales?
 
 ```sql
 SELECT b.author, SUM(o.quantity) AS Total_Quantity
@@ -471,10 +455,8 @@ INNER JOIN Orders o ON b.book_id = o.book_id
 GROUP BY b.author
 ORDER BY Total_Quantity DESC;
 ```
-</details>
 
-<details>
-<summary><b>💎 Who are the top spending customers?</b></summary>
+### 6. Who are the top spending customers?
 
 ```sql
 SELECT c.name, SUM(total_amount) AS total_spend
@@ -483,50 +465,41 @@ INNER JOIN Orders o ON c.customer_id = o.customer_id
 GROUP BY c.name
 ORDER BY total_spend DESC;
 ```
-</details>
 
 ---
 
-## 🔍 Key Findings
+## Key Findings
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 💰 Sales Insights
-```
-📊 Total Revenue Calculated
-🏆 Best-Selling Books Identified
-📚 Genre Performance Analyzed
-📅 Peak Period: November 2023
-```
+**Sales Insights**
+- Total Revenue Calculated
+- Best-Selling Books Identified
+- Genre Performance Analyzed
+- Peak Period: November 2023
 
-### 👥 Customer Behavior
-```
-👥 Loyal Customers Tracked
-💎 High-Value Customers Found
-🌍 Geographic Distribution Mapped
-📈 Purchase Frequency Analyzed
-```
+**Customer Behavior**
+- Loyal Customers Tracked
+- High-Value Customers Found
+- Geographic Distribution Mapped
+- Purchase Frequency Analyzed
 
 </td>
 <td width="50%" valign="top">
 
-### 📦 Inventory Status
-```
-📦 Current Stock Calculated
-⚠️  Low Stock Alerts
-📊 Stock Movement Tracked
-✅ Order Fulfillment Monitored
-```
+**Inventory Status**
+- Current Stock Calculated
+- Low Stock Alerts Generated
+- Stock Movement Tracked
+- Order Fulfillment Monitored
 
-### 📚 Author & Genre Trends
-```
-✍️  Top Authors Ranked
-💰 Genre Pricing Compared
-⭐ Popular Categories Found
-📈 Sales Contribution Analyzed
-```
+**Author & Genre Trends**
+- Top Authors Ranked
+- Genre Pricing Compared
+- Popular Categories Found
+- Sales Contribution Analyzed
 
 </td>
 </tr>
@@ -534,7 +507,7 @@ ORDER BY total_spend DESC;
 
 ---
 
-## 🎓 Conclusion
+## Conclusion
 
 This project showcases end-to-end SQL data analysis for an e-commerce bookstore. From database design to extracting meaningful insights, the analysis reveals customer behavior patterns, sales trends, and inventory optimization opportunities that drive informed business decisions.
 
@@ -542,11 +515,19 @@ This project showcases end-to-end SQL data analysis for an e-commerce bookstore.
 
 <div align="center">
 
-### ⭐ Star this repo if you found it helpful!
-
-**Made with ❤️ and SQL**
+**Made with SQL and PostgreSQL**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/yourusername)
 
 </div>
+
+
+
+
+
+
+
+
+
+
