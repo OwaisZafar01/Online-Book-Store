@@ -232,7 +232,3 @@ ORDER BY total_spend DESC;
 This project showcases end-to-end SQL data analysis for an e-commerce bookstore. From database design to extracting meaningful insights, the analysis reveals customer behavior patterns, sales trends, and inventory optimization opportunities that drive informed business decisions.
 
 ---
-
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/yourusername)
-
-</div>
