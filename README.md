@@ -13,52 +13,33 @@
 <img width="1033" height="624" alt="image" src="https://github.com/user-attachments/assets/7e569d40-e976-4f47-9ffd-02033ff02095" />
 <img width="1442" height="626" alt="image" src="https://github.com/user-attachments/assets/a63f78f9-71a3-41f0-9e39-fadd0fd1f516" />
 
-## 📋 Project Overview
+## Project Overview
 
-**Project Title:** Online Book Store Data Analysis  
+This project demonstrates SQL skills for analyzing an online bookstore database. It includes database creation, data import from CSV files, and comprehensive data analysis using various SQL queries to extract business insights.
+
 **Database:** `online_book_store_db`  
-**Tools Used:** PostgreSQL, SQL
-
-This project demonstrates comprehensive SQL skills for analyzing an online bookstore database. It includes database creation, data import from CSV files, and extensive data analysis using various SQL queries to extract actionable business insights.
+**Tools:** PostgreSQL, SQL
 
 ---
 
-## 🎯 Objectives
+## Objectives
+
+- Set up relational database for online bookstore
+- Import data from CSV files into PostgreSQL
+- Perform exploratory data analysis (EDA)
+- Answer business questions using SQL queries
+- Analyze sales patterns, customer behavior & inventory
+
+---
+
+## Database Structure
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%" valign="top">
 
-- Set up a relational database for an online bookstore
-- Import data from CSV files into PostgreSQL
-- Perform exploratory data analysis (EDA)
-
-</td>
-<td width="50%">
-
-- Answer business questions using SQL queries
-- Analyze sales patterns & customer behavior
-- Manage inventory and track stock levels
-
-</td>
-</tr>
-</table>
-
----
-
-## 🏗️ Database Setup
-
-### Database Creation
-The project starts by creating a database named **`online_book_store`**
-
-### 📊 Table Structure
-
-<details>
-<summary><b>📚 Books Table</b></summary>
-<br>
-
-Stores comprehensive book information:
-- `Book_ID` (Primary Key)
+### Books Table
+- `Book_ID` (PK)
 - `Title`
 - `Author`
 - `Genre`
@@ -66,178 +47,128 @@ Stores comprehensive book information:
 - `Price`
 - `Stock`
 
-</details>
+</td>
+<td width="33%" valign="top">
 
-<details>
-<summary><b>👥 Customers Table</b></summary>
-<br>
-
-Contains customer details:
-- `Customer_ID` (Primary Key)
+### 👥 Customers Table
+- `Customer_ID` (PK)
 - `Name`
 - `Email`
 - `Phone`
 - `City`
 - `Country`
 
-</details>
+</td>
+<td width="33%" valign="top">
 
-<details>
-<summary><b>🛒 Orders Table</b></summary>
-<br>
-
-Records order transactions with relationships:
-- `Order_ID` (Primary Key)
-- `Customer_ID` (Foreign Key → Customers)
-- `Book_ID` (Foreign Key → Books)
+### 🛒 Orders Table
+- `Order_ID` (PK)
+- `Customer_ID` (FK)
+- `Book_ID` (FK)
 - `Order_Date`
 - `Quantity`
 - `Total_Amount`
 
-</details>
+</td>
+</tr>
+</table>
 
 ### 🔗 Entity Relationship Diagram
 
 ```
-  ┌─────────────┐         ┌──────────────┐         ┌──────────────┐
-  │   BOOKS     │         │    ORDERS    │         │  CUSTOMERS   │
-  ├─────────────┤         ├──────────────┤         ├──────────────┤
-  │ Book_ID (PK)│◄────────│ Book_ID (FK) │         │Customer_ID(PK)│
-  │ Title       │         │Order_ID (PK) │         │ Name         │
-  │ Author      │         │Customer_ID(FK)│────────►│ Email       │
-  │ Genre       │         │ Order_Date   │         │ Phone        │
-  │ Pub_Year    │         │ Quantity     │         │ City         │
-  │ Price       │         │ Total_Amount │         │ Country      │
-  │ Stock       │         └──────────────┘         └──────────────┘
-  └─────────────┘
+┌─────────────┐         ┌──────────────┐         ┌──────────────┐
+│   BOOKS     │         │    ORDERS    │         │  CUSTOMERS   │
+├─────────────┤         ├──────────────┤         ├──────────────┤
+│ Book_ID (PK)│◄────────│ Book_ID (FK) │         │Customer_ID(PK)│
+│ Title       │         │Order_ID (PK) │         │ Name         │
+│ Author      │         │Customer_ID(FK)│────────►│ Email       │
+│ Genre       │         │ Order_Date   │         │ Phone        │
+│ Pub_Year    │         │ Quantity     │         │ City         │
+│ Price       │         │ Total_Amount │         │ Country      │
+│ Stock       │         └──────────────┘         └──────────────┘
+└─────────────┘
 ```
 
 ---
 
-## 📈 Data Analysis & Business Questions
+## Key Findings
 
-This project answers critical business questions through SQL queries:
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<div align="center">
+### Sales Insights
+```
+Total Revenue Calculated
+Best-Selling Books Identified
+Genre Performance Analyzed
+Peak Period: November 2023
+```
 
-| Category | Focus Area |
-|----------|-----------|
-|  **Revenue Analysis** | Total sales, revenue trends, top products |
-|  **Product Performance** | Best-selling books, genre analysis |
-|  **Customer Insights** | Loyal customers, spending patterns |
-|  **Inventory Management** | Stock levels, reorder points |
-|  **Time-based Analysis** | Seasonal trends, peak periods |
-|  **Geographic Analysis** | Sales by location, regional preferences |
+### Customer Behavior
+```
+Loyal Customers Tracked
+High-Value Customers Found
+Geographic Distribution Mapped
+Purchase Frequency Analyzed
+```
 
-</div>
+</td>
+<td width="50%" valign="top">
+
+### Inventory Status
+```
+Current Stock Calculated
+Low Stock Alerts
+Stock Movement Tracked
+Order Fulfillment Monitored
+```
+
+### Author & Genre Trends
+```
+Top Authors Ranked
+Genre Pricing Compared
+Popular Categories Found
+Sales Contribution Analyzed
+```
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🔍 Key Findings
+## Skills Demonstrated
 
-### ✅ Sales Insights
+| Skill | Description |
+|-------|-------------|
+| Database Design | Relational database structures with foreign keys |
+| Data Management | CSV data import and management |
+| Business Intelligence | Extracting actionable insights from data |
+| Analytics | Sales trends & inventory management |
+
+---
+
+## Quick Start
+
 ```sql
--- Sample findings visualization
-📊 Total Revenue: Calculated and tracked
-🏆 Best-Selling Books: Identified top performers
-📚 Genre Performance: Analyzed sales by category
-📅 Peak Period: November 2023 showed highest orders
+-- Create Database
+CREATE DATABASE online_book_store_db;
+
+-- Import Data
+COPY books FROM '/path/to/books.csv' CSV HEADER;
+COPY customers FROM '/path/to/customers.csv' CSV HEADER;
+COPY orders FROM '/path/to/orders.csv' CSV HEADER;
 ```
-
-**Key Discoveries:**
-- Identified total revenue and best-selling books
-- Analyzed genre-wise sales performance
-- Found peak ordering periods (November 2023)
-- Tracked monthly and seasonal trends
-
 ---
 
-### ✅ Customer Behavior
-```sql
--- Customer segmentation results
-👥 Loyal Customers: Multiple orders tracked
-💎 High-Value Customers: Top spenders identified
-🌍 Geographic Distribution: City & country analysis
-```
+## Business Value
 
-**Key Discoveries:**
-- Discovered loyal customers with multiple orders
-- Identified high-value customers by spending
-- Analyzed geographic distribution across cities and countries
-- Customer purchase frequency patterns
+The analysis provides insights into:
+- Customer purchasing patterns
+- Inventory optimization
+- Revenue generation strategies
+- Sales trend forecasting
 
 ---
-
-### ✅ Inventory Status
-```sql
--- Inventory management insights
-📦 Current Stock: Calculated after orders
-⚠️  Low Stock Alert: Restocking needed
-📊 Stock Movement: Order fulfillment tracked
-```
-
-**Key Discoveries:**
-- Calculated remaining stock after orders
-- Identified books with low inventory requiring restocking
-- Tracked stock movement and order fulfillment
-- Inventory turnover analysis
-
----
-
-### ✅ Author & Genre Trends
-```sql
--- Author and genre performance
-✍️  Top Authors: Ranked by sales quantity
-📚 Genre Pricing: Fantasy books avg price analyzed
-⭐ Popular Categories: Performance metrics
-```
-
-**Key Discoveries:**
-- Ranked authors by total sales quantity
-- Compared pricing across different genres
-- Identified most popular categories and their performance
-- Author contribution to revenue
-
----
-
-## 🎓 Conclusion
-
-This project demonstrates fundamental **SQL skills** essential for data analysis in e-commerce and retail domains. Through systematic analysis of books, customers, and orders data, I've showcased the ability to:
-
-<div align="center">
-
-| Skill Area | Competency Demonstrated |
-|------------|------------------------|
-| 🗄️ **Database Design** | Design and implement relational database structures |
-| 📥 **Data Management** | Import and manage real-world data from CSV files |
-| 🔍 **Query Writing** | Write complex queries using JOINs, aggregations, and subqueries |
-| 💡 **Business Intelligence** | Extract actionable business insights from raw data |
-| 📊 **Analytics** | Perform inventory management and sales trend analysis |
-
-</div>
-
-### 💼 Business Value
-
-The analysis provides valuable insights into:
-- 🛒 Customer purchasing patterns
-- 📦 Inventory optimization opportunities
-- 💰 Revenue generation strategies
-- 📈 Sales trend forecasting
-
-These insights can drive data-informed business decisions for an online bookstore.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
