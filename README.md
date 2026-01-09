@@ -28,7 +28,7 @@ This project demonstrates SQL skills for analyzing an online bookstore database.
 - Import data from CSV files into PostgreSQL
 - Perform exploratory data analysis (EDA)
 - Answer business questions using SQL queries
-- Analyze sales patterns, customer behavior & inventory
+- Analyze sales patterns, customer behavior and inventory
 
 ---
 
@@ -64,12 +64,12 @@ CREATE TABLE Orders (
     Quantity INT,
     Total_Amount NUMERIC(10,2)
 );
-
 ```
 
 <table>
 <tr>
 <td width="33%" valign="top">
+
 ### Books Table
 - `Book_ID` (PK)
 - `Title`
@@ -81,6 +81,7 @@ CREATE TABLE Orders (
 
 </td>
 <td width="33%" valign="top">
+
 ### Customers Table
 - `Customer_ID` (PK)
 - `Name`
@@ -91,6 +92,7 @@ CREATE TABLE Orders (
 
 </td>
 <td width="33%" valign="top">
+
 ### Orders Table
 - `Order_ID` (PK)
 - `Customer_ID` (FK)
@@ -111,7 +113,7 @@ CREATE TABLE Orders (
 ├─────────────┤         ├──────────────┤         ├──────────────┤
 │ Book_ID (PK)│◄────────│ Book_ID (FK) │         │Customer_ID(PK)│
 │ Title       │         │Order_ID (PK) │         │ Name         │
-│ Author      │         │Customer_ID(FK)│───────►│ Email        │
+│ Author      │         │Customer_ID(FK)│────────►│ Email        │
 │ Genre       │         │ Order_Date   │         │ Phone        │
 │ Pub_Year    │         │ Quantity     │         │ City         │
 │ Price       │         │ Total_Amount │         │ Country      │
@@ -191,44 +193,46 @@ ORDER BY total_spend DESC;
 <table>
 <tr>
 <td width="50%" valign="top">
-### Sales Insights
-```
-Total Revenue Calculated
-Best-Selling Books Identified
-Genre Performance Analyzed
-Peak Period: November 2023
-```
-### Customer Behavior
-```
-Loyal Customers Tracked
-High-Value Customers Found
-Geographic Distribution Mapped
-Purchase Frequency Analyzed
-```
+
+**Sales Insights**
+- Total Revenue Calculated
+- Best-Selling Books Identified
+- Genre Performance Analyzed
+- Peak Period: November 2023
+
+**Customer Behavior**
+- Loyal Customers Tracked
+- High-Value Customers Found
+- Geographic Distribution Mapped
+- Purchase Frequency Analyzed
+
 </td>
 <td width="50%" valign="top">
-### Inventory Status
-```
-Current Stock Calculated
-Low Stock Alerts
-Stock Movement Tracked
-Order Fulfillment Monitored
-```
-### Author & Genre Trends
-```
-Top Authors Ranked
-Genre Pricing Compared
-Popular Categories Found
-Sales Contribution Analyzed
-```
+
+**Inventory Status**
+- Current Stock Calculated
+- Low Stock Alerts Generated
+- Stock Movement Tracked
+- Order Fulfillment Monitored
+
+**Author & Genre Trends**
+- Top Authors Ranked
+- Genre Pricing Compared
+- Popular Categories Found
+- Sales Contribution Analyzed
+
 </td>
 </tr>
 </table>
+
 ---
 
-
-## 🎓 Conclusion
+## Conclusion
 
 This project showcases end-to-end SQL data analysis for an e-commerce bookstore. From database design to extracting meaningful insights, the analysis reveals customer behavior patterns, sales trends, and inventory optimization opportunities that drive informed business decisions.
 
 ---
+
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/yourusername)
+
+</div>
